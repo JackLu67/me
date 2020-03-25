@@ -30,6 +30,17 @@ html, body {
   font-family: Impact;
   font-size: 24px;
 }
+@media screen and (max-width: 600px) {
+  .container h1 {
+    font-size: 30px;
+    font-family: Impact;
+  }
+  .container p {
+    /* font-family: fantasy; */
+    font-family: Impact;
+    font-size: 18px;
+  }
+}
 .container ul li {
   padding: 6px;
   cursor: pointer;
