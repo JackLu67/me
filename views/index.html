@@ -1,0 +1,71 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-03-20 14:24:12
+ * @LastEditTime: 2020-03-25 10:41:28
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \study\koa2\views\index.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/index.css">
+  <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/animate.css/3.7.2/animate.min.css">
+</head>
+
+<body>
+  <div class="hero">
+    <div id="mydiv"></div>
+    <div class="container">
+      <h1 class="animated fadeInUp"><%= title %></h1>
+      <p class="animated fadeInLeft">A programmer who can't play the guitar is not a good LOL gamer</p>
+      <ul>
+        <!-- <li>
+          <a href="#" class="animated fadeInUp">博客</a>
+        </li> -->
+        <!-- <li>
+          <a href="#" class="animated fadeInUp">友站</a>
+        </li> -->
+        <li>
+          <a href="./about" class="animated fadeInUp">简历</a>
+        </li>
+        <li>
+          <a href="#" class="animated fadeInUp">GitHub</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/canvas-particle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+  window.onload = function () {
+    //配置
+    var config = {
+      vx: 4,//点x轴速度,正为右，负为左
+      vy: 4,//点y轴速度
+      height: 2,//点高宽，其实为正方形，所以不宜太大
+      width: 2,
+      count: 100,//点个数
+      color: "121, 162, 185",//点颜色
+      stroke: "255,255,255",//线条颜色
+      dist: 6000,//点吸附距离
+      e_dist: 20000,//鼠标吸附加速距离
+      max_conn: 10//点到点最大连接数
+    }
+    //调用
+    CanvasParticle(config);
+  }
+</script>
+
+</html>
